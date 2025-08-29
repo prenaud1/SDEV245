@@ -1,0 +1,8 @@
+If getting an error "running scripts is disabled on this system" when trying to activate a venv,
+in a powershell terminal, do this.
+
+Run this command first:
+
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+Then run the venv\Scripts\Activate.ps1 and it should work.
