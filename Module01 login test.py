@@ -15,8 +15,12 @@ I know, I know. Very poor password choices. But this is just an example.
 This code demonstrates one part of the CIA Triad - Confidentiality. It first does some authentication, and then
 limits what each person can do based on their roles, which is what each is authorized to do.
 
+The user account can only see options to read something, change their username, or change their password.
+The admin account can list all the writings (to add/modify/delete) or list all the users (to add/modify/delete).
+As this program is just an exercise, most of the options do not actually do anything.
+
 Curiously, the user account actually has a bit more they can do, because they can read something, while the
-admin can only see a list of usernames. But this is simply a sample framework, and doesn't do much.
+admin can only see a list of usernames.
 """
 
 import getpass   # for masking password entry
@@ -155,8 +159,8 @@ def admin_options():
     
 
 # check current role, and send to appropriate menu selections.
+# if roles doesn't match either (somehow) the program just quits.
 if role == "user":
     user_options()
-
-if role == "admin":
+elif role == "admin":
     admin_options()
