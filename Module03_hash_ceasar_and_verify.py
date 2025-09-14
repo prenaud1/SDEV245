@@ -2,7 +2,7 @@
 Module03_hash_ceasar_and_verify.py
 by Paul Renaud
 9/13/2025
-For SDEV 345 Secure Coding
+For SDEV 245 Secure Coding
 
 Instructions:
 1. Choose a language (Python, Java, C/C++, or any language of your choice).
@@ -142,6 +142,7 @@ if __name__ == "__main__":
     input("\nPress Enter to encode/decode message using substitution cipher.\n")
 
     coded = simple_encrypt(message, key)
+    print("Using key:", A_YELLOW, key, A_END)
     print(" Encoded:", A_RED, coded, A_END)
     decoded = simple_decrypt(coded, key)
     print(" Decoded:", A_GREEN, decoded, A_END)
